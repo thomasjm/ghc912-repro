@@ -33,4 +33,3 @@ executables:
     dependencies:
     - ghc
     - ghc912-repro
-    - pandoc-types

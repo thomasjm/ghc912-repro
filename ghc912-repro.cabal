@@ -40,5 +40,4 @@ executable ghc912-repro
       base >=4.7 && <5
     , ghc
     , ghc912-repro
-    , pandoc-types
   default-language: Haskell2010
