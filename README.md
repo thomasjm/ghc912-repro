@@ -1,1 +1,13 @@
-# aarch64-cpp-repro
+# ghc912-repro
+
+To test:
+
+``` shell
+nix build .#normal
+```
+
+Or, for musl64:
+
+``` shell
+nix build .#musl64
+```
