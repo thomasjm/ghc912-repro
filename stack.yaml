@@ -1,5 +1,6 @@
 
-resolver: nightly-2025-08-22
+# resolver: nightly-2025-08-22
+resolver: lts-24.6
 
 packages:
 - .
