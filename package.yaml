@@ -32,6 +32,5 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - ghc
-    - ghc-lib-parser
     - ghc912-repro
     - pandoc-types
