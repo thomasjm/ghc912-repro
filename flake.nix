@@ -24,12 +24,15 @@
                 inherit compiler-nix-name;
 
                 modules = [{
-                  # reinstallableLibGhc = false;
-                  # nonReinstallablePkgs = [
-                  #   "ghc"
-                  #   "ghc-boot"
-                  #   "Cabal-syntax" "Cabal" "Win32" "array" "base" "binary" "bytestring" "containers" "deepseq" "directory" "exceptions" "file-io" "filepath" "ghc-boot-th" "ghc-compact" "ghc-experimental" "ghc-heap" "ghc-internal" "ghc-platform" "ghc-prim" "ghci" "haskeline" "hpc" "integer-gmp" "mtl" "os-string" "parsec" "pretty" "process" "semaphore-compat" "stm" "template-haskell" "terminfo" "text" "time" "transformers" "unix" "xhtml" "haddock-api" "haddock-library"
-                  # ];
+                  reinstallableLibGhc = false;
+                  nonReinstallablePkgs = [
+                    "ghc"
+                    "ghc-boot"
+                    "rts"
+                    "integer-simple"
+                    "integer-gmp"
+                    "Cabal-syntax" "Cabal" "Win32" "array" "base" "binary" "bytestring" "containers" "deepseq" "directory" "exceptions" "file-io" "filepath" "ghc-boot-th" "ghc-compact" "ghc-experimental" "ghc-heap" "ghc-internal" "ghc-platform" "ghc-prim" "ghci" "haskeline" "hpc" "integer-gmp" "mtl" "os-string" "parsec" "pretty" "process" "semaphore-compat" "stm" "template-haskell" "terminfo" "text" "time" "transformers" "unix" "xhtml" "haddock-api" "haddock-library"
+                  ];
 
                   packages.directory.components.library.configureFlags = [''-f os-string''];
                   packages.file-io.components.library.configureFlags = [''-f os-string''];
@@ -69,7 +72,7 @@
             aarch64-multiplatform = ((pkgs.pkgsCross.aarch64-multiplatform.hixProject compiler-nix-name).flake {}).packages."ghc912-repro:exe:ghc912-repro";
             aarch64-multiplatform-musl = ((pkgs.pkgsCross.aarch64-multiplatform-musl.hixProject compiler-nix-name).flake {}).packages."ghc912-repro:exe:ghc912-repro";
 
-            # hackage = (pkgs.pkgsCross.aarch64-multiplatform-musl.haskell-nix.hackage-package { compiler-nix-name = "ghc9122"; name = "ihaskell"; }).components.library;
+            hackage = (pkgs.pkgsCross.aarch64-multiplatform-musl.haskell-nix.hackage-package { compiler-nix-name = "ghc9122"; name = "ihaskell"; }).components.library;
           });
         }
     );
