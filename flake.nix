@@ -26,12 +26,7 @@
                 modules = [{
                   reinstallableLibGhc = false;
                   nonReinstallablePkgs = [
-                    "ghc"
-                    "ghc-boot"
-                    "rts"
-                    "integer-simple"
-                    "integer-gmp"
-                    "Cabal-syntax" "Cabal" "Win32" "array" "base" "binary" "bytestring" "containers" "deepseq" "directory" "exceptions" "file-io" "filepath" "ghc-boot-th" "ghc-compact" "ghc-experimental" "ghc-heap" "ghc-internal" "ghc-platform" "ghc-prim" "ghci" "haskeline" "hpc" "integer-gmp" "mtl" "os-string" "parsec" "pretty" "process" "semaphore-compat" "stm" "template-haskell" "terminfo" "text" "time" "transformers" "unix" "xhtml" "haddock-api" "haddock-library"
+                    "ghc" "ghc-boot" "rts" "Cabal-syntax" "Cabal" "Win32" "array" "base" "binary" "bytestring" "containers" "deepseq" "directory" "exceptions" "file-io" "filepath" "ghc-boot-th" "ghc-compact" "ghc-experimental" "ghc-heap" "ghc-internal" "ghc-platform" "ghc-prim" "ghci" "haskeline" "hpc" "integer-gmp" "mtl" "os-string" "parsec" "pretty" "process" "semaphore-compat" "stm" "template-haskell" "terminfo" "text" "time" "transformers" "unix" "xhtml" "haddock-api" "haddock-library"
                   ];
 
                   packages.directory.components.library.configureFlags = [''-f os-string''];
